@@ -32,7 +32,8 @@ module.exports = {
     '@typescript-eslint/switch-exhaustiveness-check': 2,
     // React
     'jsx-quotes': [2, "prefer-double"],
-    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/rules-of-hooks': 2,
+    'react-hooks/exhaustive-deps': 1,
     'react/prop-types': 0,
     'react/jsx-key': 0,
     'react/display-name': [0, { ignoreTranspilerName: false }],
