@@ -8,18 +8,18 @@ type Props = {
 export function RenderUser({ user }: Props) {
   return (
     <>
-      <P label="name" value={user.name} />
-      <P label="email" value={user.email} />
-      <P label="company" value={user.company.name} />
-      <P label="city" value={user.address.city} />
-      <P label="street" value={user.address.street} />
+      <Line label="name" value={user.name} />
+      <Line label="email" value={user.email} />
+      <Line label="company" value={user.company.name} />
+      <Line label="city" value={user.address.city} />
+      <Line label="street" value={user.address.street} />
     </>
   )
 }
 
 // utils
 
-function P({ label, value }: { label: string; value: string }) {
+function Line({ label, value }: { label: string; value: string }) {
   return (
     <p className="mb-4">
       <span className="font-bold">{label}:</span> {value}

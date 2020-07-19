@@ -1,4 +1,3 @@
-import cx from 'classcat'
 import NextLink from 'next/link'
 import * as React from 'react'
 import { DynamicRoutesDetail } from 'routes'
@@ -22,7 +21,7 @@ export function DynamicLink({ routeDetails, label, param }: Props) {
       <a
         tabIndex={0}
         onKeyPress={handleKeyPress}
-        className={cx('cursor-pointer text-gray-600')}
+        className="cursor-pointer text-gray-600"
       >
         {label}
       </a>
