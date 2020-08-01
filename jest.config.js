@@ -8,6 +8,7 @@ const ignores = [
   '/__tests__/helpers/',
   '/__tests__/utils/',
   '__mocks__',
+  '__stubs__',
 ]
 
 module.exports = {
