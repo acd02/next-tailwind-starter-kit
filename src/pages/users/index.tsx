@@ -2,7 +2,7 @@ import { MainLayout } from 'components/layouts/main'
 import { User } from 'models/user'
 import { GetStaticProps } from 'next'
 import { RenderUsers } from 'pagesContent/users'
-import * as React from 'react'
+import React from 'react'
 import { constant, identity } from 'utils/function'
 import { get } from 'utils/http'
 

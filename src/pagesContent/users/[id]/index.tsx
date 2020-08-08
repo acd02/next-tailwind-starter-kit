@@ -1,5 +1,5 @@
 import { User } from 'models/user'
-import * as React from 'react'
+import React from 'react'
 
 type Props = {
   user: User

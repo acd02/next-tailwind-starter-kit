@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 import { Meta } from '../../atoms/meta'
 import { Footer, Nav } from '../../organisms'

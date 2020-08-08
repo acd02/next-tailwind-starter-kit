@@ -1,5 +1,5 @@
 import { MainLayout } from 'components/layouts/main'
-import * as React from 'react'
+import React from 'react'
 
 export default function Home() {
   return (

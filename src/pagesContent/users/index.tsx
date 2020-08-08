@@ -1,6 +1,6 @@
 import { DynamicLink } from 'components/atoms/link'
 import { User } from 'models/user'
-import * as React from 'react'
+import React from 'react'
 import { DynamicRoutes, getRouteDetails } from 'routes'
 
 type Props = {

@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import * as React from 'react'
+import React from 'react'
 import { DynamicRoutesDetail } from 'routes'
 
 import { handleKeyPress } from './utils'

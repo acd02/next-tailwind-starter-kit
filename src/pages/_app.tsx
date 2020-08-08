@@ -2,8 +2,8 @@ import '../css/tailwind.css'
 
 import { AppProps } from 'next/app'
 import Router from 'next/router'
-import * as NProgress from 'nprogress'
-import * as React from 'react'
+import NProgress from 'nprogress'
+import React from 'react'
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()

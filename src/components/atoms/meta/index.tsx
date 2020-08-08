@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import * as React from 'react'
+import React from 'react'
 
 type Props = {
   title: string
