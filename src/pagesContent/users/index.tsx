@@ -1,14 +1,14 @@
-import { DynamicLink } from 'components/atoms/link'
 import { User } from 'models/user'
-import React from 'react'
-import { DynamicRoutes, getRouteDetails } from 'routes'
+import React, { useState } from 'react'
+
+import { UserLink } from './UserLink'
 
 type Props = {
   users: User[]
 }
 
 export function RenderUsers({ users }: Props) {
-  const [showUsers, setShowUsers] = React.useState(true)
+  const [showUsers, setShowUsers] = useState(true)
 
   return (
     <>
@@ -20,21 +20,7 @@ export function RenderUsers({ users }: Props) {
         {showUsers ? 'hide' : 'show'} users
       </button>
       <h2 className="text-4xl mb-4">Users:</h2>
-      {showUsers && users.map(renderUserLink)}
+      {showUsers && users.map(u => <UserLink {...u} />)}
     </>
-  )
-}
-
-// utils
-
-function renderUserLink({ id, name }: User) {
-  return (
-    <span className="block mb-2" key={id}>
-      <DynamicLink
-        routeDetails={getRouteDetails(DynamicRoutes.user)}
-        param={`${id}`}
-        label={name}
-      />
-    </span>
   )
 }

@@ -1,4 +1,6 @@
-export function handleKeyPress(e: React.KeyboardEvent<HTMLAnchorElement>) {
+import { KeyboardEvent } from 'react'
+
+export function handleKeyPress(e: KeyboardEvent<HTMLAnchorElement>) {
   e.preventDefault()
 
   if (e.key === 'Enter' || e.location === 0) {

@@ -1,5 +1,11 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-export const Footer = React.memo(() => (
-  <footer className="flex-none py-4 text-center border-t border-gray-300">footer</footer>
-))
+function FooterContent() {
+  return (
+    <footer className="flex-none py-4 text-center border-t border-gray-300">
+      footer
+    </footer>
+  )
+}
+
+export const Footer = memo(FooterContent)
