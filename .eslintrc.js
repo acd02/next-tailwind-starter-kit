@@ -43,7 +43,7 @@ module.exports = {
     'fp/no-mutation': [
       1,
       {
-        exceptions: [{ property: 'getInitialProps' }],
+        exceptions: [{ property: 'getInitialProps' }, { property: 'current' }],
       },
     ],
     'fp/no-let': 1,
