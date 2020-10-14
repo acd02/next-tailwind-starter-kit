@@ -28,7 +28,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 0,
     '@typescript-eslint/prefer-interface': 0,
     '@typescript-eslint/no-object-literal-type-assertion': 0,
-    "@typescript-eslint/no-shadow": 2,
+    '@typescript-eslint/no-shadow': 2,
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/no-unused-vars': 0,
     '@typescript-eslint/no-use-before-define': 0,
@@ -44,7 +44,11 @@ module.exports = {
     'fp/no-mutation': [
       1,
       {
-        exceptions: [{ property: 'getInitialProps' }, { property: 'current' }],
+        exceptions: [
+          { property: 'getInitialProps' },
+          { property: 'current' },
+          { property: 'getLayout' },
+        ],
       },
     ],
     'fp/no-let': 1,

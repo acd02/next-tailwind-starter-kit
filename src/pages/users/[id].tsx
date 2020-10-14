@@ -19,7 +19,6 @@ export default function UserDetail({ fetchedUser }: Props) {
 }
 
 // Next.js API
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const fetchedUsers = await get<User[], unknown>(
     'https://jsonplaceholder.typicode.com/users'

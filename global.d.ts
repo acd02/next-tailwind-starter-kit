@@ -1,4 +1,5 @@
-type UnknownObj = Record<string, unknown>
+import { NextPage } from 'next'
+import { ReactNode } from 'react'
 
 declare module '*.css' {
   interface ClassNames {
@@ -6,4 +7,8 @@ declare module '*.css' {
   }
   const classNames: ClassNames
   export = classNames
+}
+
+type NextPageWithLayout<T> = NextPage<T> & {
+  getLayout?: (page: ReactNode) => ReactNode
 }

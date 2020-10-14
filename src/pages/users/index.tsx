@@ -1,4 +1,5 @@
 import { MainLayout } from 'components/layouts/main'
+import { NextPageWithLayout } from 'global'
 import { User } from 'models/user'
 import { GetStaticProps } from 'next'
 import { RenderUsers } from 'pagesContent/users'
@@ -11,15 +12,16 @@ type Props = {
 }
 
 export default function Users({ fetchedUsers }: Props) {
-  return (
-    <MainLayout title="users" description="list of all users">
-      <RenderUsers users={fetchedUsers} />
-    </MainLayout>
-  )
+  return <RenderUsers users={fetchedUsers} />
 }
 
-// Next.js API
+;(Users as NextPageWithLayout<unknown>).getLayout = page => (
+  <MainLayout title="users" description="list of all users">
+    {page}
+  </MainLayout>
+)
 
+// Next.js API
 export const getStaticProps: GetStaticProps<Partial<Props>> = async () => {
   return {
     props: {
