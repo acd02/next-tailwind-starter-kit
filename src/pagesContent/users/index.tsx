@@ -1,7 +1,7 @@
 import { User } from 'models/user'
 import React, { useState } from 'react'
 
-import { UserLink } from './UserLink'
+import { UserLink } from './components/UserLink'
 
 type Props = {
   users: User[]

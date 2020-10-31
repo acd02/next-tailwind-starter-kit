@@ -1,4 +1,5 @@
 import { MainLayout } from 'components/layouts/main'
+import { NextPageWithLayout } from 'global'
 import { User } from 'models/user'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { RenderUser } from 'pagesContent/users/[id]'
@@ -11,12 +12,14 @@ type Props = {
 }
 
 export default function UserDetail({ fetchedUser }: Props) {
-  return (
-    <MainLayout title={fetchedUser?.name ?? ''} description="user details">
-      {fetchedUser && <RenderUser user={fetchedUser} />}
-    </MainLayout>
-  )
+  return fetchedUser && <RenderUser user={fetchedUser} />
 }
+
+;(UserDetail as NextPageWithLayout<Props>).getLayout = page => (
+  <MainLayout title={page.props.fetchedUser?.name ?? ''} description="user details">
+    {page}
+  </MainLayout>
+)
 
 // Next.js API
 export const getStaticPaths: GetStaticPaths = async () => {

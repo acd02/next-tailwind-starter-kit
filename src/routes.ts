@@ -1,11 +1,16 @@
-export enum Routes {
-  index = '/',
-  users = '/users',
-}
+import { ValueOf } from 'global'
 
-export enum DynamicRoutes {
-  user,
-}
+export const routes = {
+  index: '/',
+  users: '/users',
+} as const
+
+export const dynamicRoutes = {
+  user: 'user',
+} as const
+
+export type Routes = ValueOf<typeof routes>
+type DynamicRoutes = ValueOf<typeof dynamicRoutes>
 
 export type DynamicRoutesDetail = {
   basePath: string
@@ -14,7 +19,7 @@ export type DynamicRoutesDetail = {
 
 export function getRouteDetails(route: DynamicRoutes): DynamicRoutesDetail {
   switch (route) {
-    case DynamicRoutes.user:
+    case 'user':
       return { basePath: 'users', paramBracket: '[id]' }
   }
 }

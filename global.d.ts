@@ -1,5 +1,5 @@
-import { NextPage } from 'next'
-import { ReactNode } from 'react'
+import { NextPage, PageConfig } from 'next'
+import { ReactElement } from 'react'
 
 declare module '*.css' {
   interface ClassNames {
@@ -10,5 +10,7 @@ declare module '*.css' {
 }
 
 type NextPageWithLayout<T> = NextPage<T> & {
-  getLayout?: (page: ReactNode) => ReactNode
+  getLayout?: (page: ReactElement<T>) => ReactElement
 }
+
+declare type ValueOf<T> = T[keyof T]

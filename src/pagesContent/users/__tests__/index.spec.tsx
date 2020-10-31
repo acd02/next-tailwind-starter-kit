@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import React from 'react'
 
-import { RenderUsers } from '../index'
+import { RenderUsers } from '../'
 
 describe('RenderUsers', () => {
   it('should render the content', () => {
