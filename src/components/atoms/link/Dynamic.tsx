@@ -14,10 +14,7 @@ export function DynamicLink({ routeDetails, label, param }: Props) {
   const { basePath } = routeDetails
 
   return (
-    <NextLink
-      href={`${basePath}/${routeDetails.paramBracket}`}
-      as={`${basePath}/${param}`}
-    >
+    <NextLink href={`${basePath}/${param}`}>
       <a
         tabIndex={0}
         onKeyPress={handleKeyPress}
