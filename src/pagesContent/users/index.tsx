@@ -20,7 +20,7 @@ export function RenderUsers({ users }: Props) {
         {showUsers ? 'hide' : 'show'} users
       </button>
       <h2 className="text-4xl mb-4">Users:</h2>
-      {showUsers && users.map(u => <UserLink {...u} />)}
+      {showUsers && users.map(u => <UserLink key={u.id} {...u} />)}
     </>
   )
 }
