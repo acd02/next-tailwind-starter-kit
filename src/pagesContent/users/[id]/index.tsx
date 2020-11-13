@@ -10,9 +10,8 @@ function RenderUser({ user }: Props) {
     <>
       <Line label="name" value={user.name} />
       <Line label="email" value={user.email} />
-      <Line label="company" value={user.company.name} />
-      <Line label="city" value={user.address.city} />
-      <Line label="street" value={user.address.street} />
+      <Line label="city" value={user.address[0].city} />
+      <Line label="street" value={user.address[0].street} />
     </>
   )
 }
