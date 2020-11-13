@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import React from 'react'
-import { DynamicRoutesDetail } from 'routes'
+import type { DynamicRoutesDetail } from 'routes'
 
 import { handleKeyPress } from './utils'
 

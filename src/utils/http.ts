@@ -1,7 +1,7 @@
 import { err, ok, Result, result } from 'acd-utils'
 import to from 'await-to-js'
 
-export async function get<Res, Err>(url: string): Promise<Result<Err, Res>> {
+async function get<Res, Err>(url: string): Promise<Result<Err, Res>> {
   const [error, data] = await to<Res, Err>(
     fetch(url)
       .then(handleErrors)
@@ -11,7 +11,7 @@ export async function get<Res, Err>(url: string): Promise<Result<Err, Res>> {
   return result(error ? err(error) : ok(data as Res))
 }
 
-export function post<Data, Res>(body: Data) {
+function post<Data, Res>(body: Data) {
   /* eslint-disable-next-line no-undef */
   const headers = new Headers({
     'Content-type': 'application/json; charset=UTF-8',
@@ -36,3 +36,5 @@ function handleErrors<Err>(res: Response) {
     return Promise.reject((res as unknown) as Err)
   else return Promise.resolve(res)
 }
+
+export { get, post }

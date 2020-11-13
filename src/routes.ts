@@ -1,25 +1,28 @@
 import { ValueOf } from 'global'
 
-export const routes = {
+const routes = {
   index: '/',
   users: '/users',
 } as const
 
-export const dynamicRoutes = {
+const dynamicRoutes = {
   user: 'user',
 } as const
 
-export type Routes = ValueOf<typeof routes>
+type Routes = ValueOf<typeof routes>
 type DynamicRoutes = ValueOf<typeof dynamicRoutes>
 
-export type DynamicRoutesDetail = {
+type DynamicRoutesDetail = {
   basePath: string
   paramBracket: string
 }
 
-export function getRouteDetails(route: DynamicRoutes): DynamicRoutesDetail {
+function getRouteDetails(route: DynamicRoutes): DynamicRoutesDetail {
   switch (route) {
     case 'user':
       return { basePath: 'users', paramBracket: '[id]' }
   }
 }
+
+export { routes, dynamicRoutes, getRouteDetails }
+export type { Routes, DynamicRoutesDetail }

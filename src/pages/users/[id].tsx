@@ -11,7 +11,7 @@ type Props = {
   fetchedUser?: User
 }
 
-export default function UserDetail({ fetchedUser }: Props) {
+function UserDetail({ fetchedUser }: Props) {
   return fetchedUser && <RenderUser user={fetchedUser} />
 }
 
@@ -48,3 +48,5 @@ export const getStaticProps: GetStaticProps<Partial<Props>> = async ({ params })
     },
   }
 }
+
+export default UserDetail

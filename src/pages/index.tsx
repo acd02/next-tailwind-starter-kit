@@ -2,7 +2,7 @@ import { MainLayout } from 'components/layouts/main'
 import { NextPageWithLayout } from 'global'
 import React from 'react'
 
-export default function Home() {
+function Home() {
   return <p className="font-medium">content</p>
 }
 
@@ -11,3 +11,5 @@ export default function Home() {
     {page}
   </MainLayout>
 )
+
+export default Home

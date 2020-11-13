@@ -5,7 +5,7 @@ type Props = {
   user: User
 }
 
-export function RenderUser({ user }: Props) {
+function RenderUser({ user }: Props) {
   return (
     <>
       <Line label="name" value={user.name} />
@@ -26,3 +26,5 @@ function Line({ label, value }: { label: string; value: string }) {
     </p>
   )
 }
+
+export { RenderUser }

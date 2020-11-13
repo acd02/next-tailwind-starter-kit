@@ -58,6 +58,7 @@ module.exports = {
     'fp/no-rest-parameters': 'off',
     // import
     'import/no-absolute-path': 0,
+    'import/exports-last': 1,
     // simple-import-sort
     'simple-import-sort/sort': 1,
     // Misc
