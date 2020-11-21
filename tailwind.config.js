@@ -10,7 +10,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    textColor: ['responsive', 'hover', 'focus', 'important', 'important-hover'],
+    extend: {
+      textColor: ['important', 'important-hover'],
+    },
   },
   plugins: [
     plugin(function ({ addVariant }) {
