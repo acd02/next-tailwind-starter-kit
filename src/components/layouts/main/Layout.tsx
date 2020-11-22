@@ -10,7 +10,7 @@ export function MainLayout({ title, description, children }: PropsWithChildren<P
     <div className="flex flex-col h-full">
       <Meta title={title} description={description} />
       <Nav />
-      <div className="p-4 flex-grow">{children}</div>
+      <div className="flex-grow p-4">{children}</div>
       <Footer />
     </div>
   )

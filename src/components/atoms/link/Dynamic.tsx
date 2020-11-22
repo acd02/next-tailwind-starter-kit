@@ -18,7 +18,7 @@ export function DynamicLink({ routeDetails, label, param }: Props) {
       <a
         tabIndex={0}
         onKeyPress={handleKeyPress}
-        className="cursor-pointer text-gray-600"
+        className="text-gray-600 cursor-pointer"
       >
         {label}
       </a>

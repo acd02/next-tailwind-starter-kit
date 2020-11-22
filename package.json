@@ -64,6 +64,7 @@
     "postcss-import": "13.0.0",
     "postcss-nesting": "7.0.1",
     "prettier": "2.2.0",
+    "prettier-plugin-tailwind-css": "1.4.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-transition-group": "4.4.1",
