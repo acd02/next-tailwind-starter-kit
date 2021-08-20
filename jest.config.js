@@ -14,6 +14,7 @@ const ignores = [
 module.exports = {
   preset: 'ts-jest',
   testMatch: ['<rootDir>/src/**/__tests__/*.spec.(js|ts|tsx)'],
+  testEnvironment: 'jsdom',
   moduleFileExtensions: ['js', 'ts', 'tsx'],
   moduleDirectories: ['node_modules', 'jest/testUtils'],
   moduleNameMapper: {
@@ -47,7 +48,7 @@ module.exports = {
   globals: {
     'ts-jest': {
       babelConfig: true,
-      tsConfig: '<rootDir>/tsconfig.jest.json',
+      tsconfig: '<rootDir>/tsconfig.jest.json',
     },
   },
   setupFilesAfterEnv: ['<rootDir>/jest/setupAfterEnv.ts'],

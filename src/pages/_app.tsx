@@ -4,7 +4,6 @@ import { NextPageWithLayout } from 'global'
 import { AppProps } from 'next/app'
 import Router from 'next/router'
 import NProgress from 'nprogress'
-import React from 'react'
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()

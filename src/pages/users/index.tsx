@@ -1,9 +1,8 @@
-import { MainLayout } from 'components/layouts/main'
+import { MainLayout } from 'components/layouts/Main'
 import { NextPageWithLayout } from 'global'
-import { User } from 'models/user'
+import { User } from 'types/user'
 import { GetStaticProps } from 'next'
 import { RenderUsers } from 'pagesContent/users'
-import React from 'react'
 import { constant, identity } from 'utils/function'
 import { get } from 'utils/http'
 

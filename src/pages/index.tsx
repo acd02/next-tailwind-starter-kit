@@ -1,6 +1,5 @@
-import { MainLayout } from 'components/layouts/main'
+import { MainLayout } from 'components/layouts/Main'
 import { NextPageWithLayout } from 'global'
-import React from 'react'
 
 function Home() {
   return <p className="font-medium">content</p>

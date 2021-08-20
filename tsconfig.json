@@ -4,11 +4,11 @@
     "baseUrl": ".",
     "paths": {
       "components/*": ["./src/components/*"],
-      "models/*": ["./src/models/*"],
       "pages/*": ["./src/pages/*"],
       "pagesContent/*": ["./src/pagesContent/*"],
       "utils/*": ["./src/utils/*"],
-      "routes": ["./src/routes.ts"]
+      "routes": ["./src/routes.ts"],
+      "types/*": ["./src/types/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

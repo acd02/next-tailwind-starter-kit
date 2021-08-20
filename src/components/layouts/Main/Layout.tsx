@@ -1,7 +1,8 @@
-import React, { PropsWithChildren } from 'react'
+import { PropsWithChildren } from 'react'
 
-import { Meta } from '../../atoms/meta'
-import { Footer, Nav } from '../../organisms'
+import { Meta } from 'components/atoms/Meta'
+import { Nav } from 'components/organisms/Nav'
+import { Footer } from 'components/organisms/Footer'
 
 type Props = Parameters<typeof Meta>[0]
 

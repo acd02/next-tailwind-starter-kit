@@ -1,5 +1,4 @@
 import { NextPage } from 'next'
-import React from 'react'
 
 type Props = {
   statusCode?: number
