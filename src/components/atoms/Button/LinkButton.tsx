@@ -26,6 +26,7 @@ function LinkButton({
       className={cx([
         'relative px-2 py-1 mb-2 transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 ring-offset-1',
         colorMapper[color],
+        className,
       ])}
       {...rest}
     >
