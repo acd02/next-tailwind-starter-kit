@@ -1,8 +1,8 @@
-import { User } from 'types/user'
+import { Button } from 'components/atoms/Button'
 import { useState } from 'react'
+import { User } from 'types/user'
 
 import { UserLink } from './components/UserLink'
-import { Button } from 'components/atoms/Button'
 
 type Props = {
   users: User[]

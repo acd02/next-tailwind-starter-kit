@@ -1,8 +1,8 @@
 import cx from 'classcat'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
-import { routes } from 'routes'
 import type { Routes } from 'routes'
+import { routes } from 'routes'
 
 import { handleKeyPress } from './utils'
 

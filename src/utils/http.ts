@@ -33,7 +33,7 @@ function post<Data, Res>(body: Data) {
 function handleErrors<Err>(res: Response) {
   if (!res.ok)
     /* eslint-disable-next-line prefer-promise-reject-errors */
-    return Promise.reject((res as unknown) as Err)
+    return Promise.reject(res as unknown as Err)
   else return Promise.resolve(res)
 }
 

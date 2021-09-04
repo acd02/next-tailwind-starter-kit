@@ -1,5 +1,5 @@
-import { ComponentPropsWithoutRef } from 'react'
 import cx from 'classcat'
+import { ComponentPropsWithoutRef } from 'react'
 
 type Color = 'gray' | 'blue'
 type Props = {

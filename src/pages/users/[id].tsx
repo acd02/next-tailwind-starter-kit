@@ -1,8 +1,8 @@
 import { MainLayout } from 'components/layouts/Main'
-import { NextPageWithLayout } from 'global'
-import { User } from 'types/user'
-import { GetStaticPaths, GetStaticProps } from 'next'
+import type { NextPageWithLayout } from 'global-next'
+import type { GetStaticPaths, GetStaticProps } from 'next'
 import { RenderUser } from 'pagesContent/users/[id]'
+import type { User } from 'types/user'
 import { constant, identity, noop } from 'utils/function'
 import { get } from 'utils/http'
 
