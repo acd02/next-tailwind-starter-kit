@@ -1,5 +1,7 @@
 import { User } from 'types/user'
 
+import { Row } from './components/Row'
+
 type Props = {
   user: User
 }
@@ -7,22 +9,12 @@ type Props = {
 function RenderUser({ user }: Props) {
   return (
     <>
-      <Line label="name" value={user.name} />
-      <Line label="email" value={user.email} />
-      <Line label="company" value={user.company.name} />
-      <Line label="city" value={user.address.city} />
-      <Line label="street" value={user.address.street} />
+      <Row label="name" value={user.name} />
+      <Row label="email" value={user.email} />
+      <Row label="company" value={user.company.name} />
+      <Row label="city" value={user.address.city} />
+      <Row label="street" value={user.address.street} />
     </>
-  )
-}
-
-// utils
-
-function Line({ label, value }: { label: string; value: string }) {
-  return (
-    <p className="mb-4">
-      <span className="font-bold">{label}:</span> {value}
-    </p>
   )
 }
 
