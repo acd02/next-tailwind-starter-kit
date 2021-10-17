@@ -1,14 +1,14 @@
+const ESLintPlugin = require('eslint-webpack-plugin')
 const computePath = require('./utils').computePath
 
 module.exports = {
   webpack(config, options) {
-    const esLintRule = {
-      test: /\.tsx$/,
-      enforce: 'pre',
-      exclude: ['/node_modules/', '/.next/'],
-      loader: 'eslint-loader',
-    }
-    config.module.rules.push(esLintRule)
+    config.plugins.push(
+      new ESLintPlugin({
+        extensions: ['ts', 'tsx'],
+        exclude: ['/node_modules/', '/.next/'],
+      })
+    )
 
     config.resolve.alias = {
       ...config.resolve.alias,
