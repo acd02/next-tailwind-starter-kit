@@ -12,7 +12,6 @@ const ignores = [
 ]
 
 module.exports = {
-  preset: 'ts-jest',
   testMatch: ['<rootDir>/src/**/__tests__/*.spec.(js|ts|tsx)'],
   testEnvironment: 'jsdom',
   moduleFileExtensions: ['js', 'ts', 'tsx'],
@@ -26,7 +25,7 @@ module.exports = {
       '<rootDir>/jest/moduleMapper/fileMock.ts',
   },
   transform: {
-    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
   },
   testPathIgnorePatterns: [...ignores],
   collectCoverageFrom: ['src/**/*.+(js|jsx|ts|tsx)'],
@@ -43,12 +42,6 @@ module.exports = {
       functions: 100,
       lines: 100,
       statements: 100,
-    },
-  },
-  globals: {
-    'ts-jest': {
-      babelConfig: true,
-      tsconfig: '<rootDir>/tsconfig.jest.json',
     },
   },
   setupFilesAfterEnv: ['<rootDir>/jest/setupAfterEnv.ts'],

@@ -5,7 +5,13 @@ module.exports = {
     },
   },
   parser: '@typescript-eslint/parser', // Specifies the ESLint parser
-  plugins: ['@typescript-eslint', 'react-hooks', 'fp', 'simple-import-sort'],
+  plugins: [
+    '@typescript-eslint',
+    'react-hooks',
+    'fp',
+    'simple-import-sort',
+    'testing-library',
+  ],
   extends: [
     'standard',
     'plugin:fp/recommended',
@@ -47,6 +53,20 @@ module.exports = {
     'react/prop-types': 0,
     'react/jsx-key': 0,
     'react/display-name': [0, { ignoreTranspilerName: false }],
+    // testing library
+    'testing-library/await-async-utils': 2,
+    'testing-library/no-await-sync-events': 2,
+    'testing-library/no-await-sync-query': 2,
+    'testing-library/no-wait-for-empty-callback': 2,
+    'testing-library/no-wait-for-multiple-assertions': 2,
+    'testing-library/no-debugging-utils': 2,
+    'testing-library/prefer-query-by-disappearance': 1,
+    'testing-library/prefer-presence-queries': 1,
+    'testing-library/prefer-find-by': 1,
+    'testing-library/await-async-query': 1,
+    'testing-library/await-fire-event': 1,
+    'testing-library/prefer-screen-queries': 1,
+    'testing-library/prefer-wait-for': 2,
     // fp
     'fp/no-mutation': [
       2,

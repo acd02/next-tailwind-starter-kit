@@ -1,11 +1,11 @@
-import { render } from '@testing-library/react'
+import { render, screen } from 'rtl'
 
 import { RenderUsers } from '../'
 
 describe('RenderUsers', () => {
   it('should render the content', () => {
-    const { getByText } = render(<RenderUsers users={[]} />)
+    render(<RenderUsers users={[]} />)
 
-    expect(getByText(/users:/i)).toBeInTheDocument()
+    expect(screen.getByText(/users:/i)).toBeInTheDocument()
   })
 })
