@@ -4,8 +4,6 @@ import { useRouter } from 'next/router'
 import type { Routes } from 'routes'
 import { routes } from 'routes'
 
-import { handleKeyPress } from './utils'
-
 type Props = {
   route: keyof Routes
   label: string
@@ -28,7 +26,6 @@ export function Link({ label, className, param, route, isActive: isActiveProp }:
           isActive ? 'border-gray-600' : 'border-transparent',
           className,
         ])}
-        onKeyPress={handleKeyPress}
       >
         {label}
       </a>
