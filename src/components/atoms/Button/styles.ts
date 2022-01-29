@@ -9,7 +9,7 @@ const colorMapper: Record<Color, string> = {
 
 export const getButtonClassNames = (color: Color, className?: string) =>
   cx([
-    'relative px-2 py-1 mb-2 transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 ring-offset-1',
+    'relative mb-2 cursor-pointer px-2 py-1 ring-offset-1 transition-colors duration-200 focus:outline-none focus:ring-2',
     colorMapper[color],
     className,
   ])

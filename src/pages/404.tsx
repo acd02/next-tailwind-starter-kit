@@ -1,3 +1,3 @@
 export default function Custom404() {
-  return <div className="flex items-center justify-center h-full">missing page</div>
+  return <div className="flex h-full items-center justify-center">missing page</div>
 }

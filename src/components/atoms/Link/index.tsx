@@ -22,7 +22,7 @@ export function Link({ label, className, param, route, isActive: isActiveProp }:
       <a
         tabIndex={0}
         className={cx([
-          'border-b cursor-pointer text-gray-600',
+          'cursor-pointer border-b text-gray-600',
           isActive ? 'border-gray-600' : 'border-transparent',
           className,
         ])}
