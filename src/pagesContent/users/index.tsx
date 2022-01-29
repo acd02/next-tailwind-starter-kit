@@ -11,7 +11,7 @@ export function RenderUsers({ users }: Props) {
   const [showUsers, setShowUsers] = useState(true)
 
   const links = users.map(({ id, name }) => (
-    <li className="block mb-2 w-[fit-content]">
+    <li key={id} className="mb-2 block w-fit">
       <Link route="users" param={String(id)} label={name} />
     </li>
   ))
