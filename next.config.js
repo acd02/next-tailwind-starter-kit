@@ -19,6 +19,7 @@ module.exports = {
       routes: computePath('./src/routes.ts'),
       types: computePath('./src/types'),
       utils: computePath('./src/utils'),
+      hooks: computePath('./src/hooks'),
     }
 
     return config
