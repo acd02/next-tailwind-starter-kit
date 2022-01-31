@@ -3,36 +3,21 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "components/*": [
-        "./src/components/*"
-      ],
-      "pages/*": [
-        "./src/pages/*"
-      ],
-      "pagesContent/*": [
-        "./src/pagesContent/*"
-      ],
-      "utils/*": [
-        "./src/utils/*"
-      ],
-      "routes": [
-        "./src/routes.ts"
-      ],
-      "rtl": [
-        "./src/rtl/index.tsx"
-      ],
-      "types/*": [
-        "./src/types/*"
-      ]
+      "components/*": ["./src/components/*"],
+      "pages/*": ["./src/pages/*"],
+      "utils/*": ["./src/utils/*"],
+      "routes": ["./src/routes.ts"],
+      "rtl": ["./src/rtl/index.tsx"],
+      "types/*": ["./src/types/*"],
+      "stores/*": ["./src/stores/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "data/*": ["./src/data/*"],
+      "charts/*": ["./src/charts/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2018",
-      "es5"
-    ],
+    "lib": ["dom", "es2018", "es5"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -49,12 +34,6 @@
     "isolatedModules": true,
     "incremental": true
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

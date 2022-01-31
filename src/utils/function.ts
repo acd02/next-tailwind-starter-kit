@@ -19,3 +19,7 @@ export function noop() {
 export function constant<T>(x: T): () => T {
   return () => x
 }
+
+export function sleep(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}

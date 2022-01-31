@@ -6,12 +6,14 @@ module.exports = {
       ...config.resolve.alias,
       components: computePath('./src/components/'),
       pages: computePath('./src/pages/'),
-      pagesContent: computePath('./src/pagesContent/'),
       public: computePath('./public/'),
       routes: computePath('./src/routes.ts'),
       types: computePath('./src/types'),
       utils: computePath('./src/utils'),
       hooks: computePath('./src/hooks'),
+      stores: computePath('./src/stores'),
+      data: computePath('./src/data'),
+      charts: computePath('./src/charts'),
     }
 
     return config
