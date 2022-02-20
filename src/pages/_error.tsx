@@ -5,17 +5,13 @@ type Props = {
 }
 
 const Error: NextPage<Props, unknown> = ({ statusCode }) => {
-  return (
-    <div className="flex h-full items-center justify-center">
-      {(() => {
-        if (statusCode)
-          return statusCode === 404
-            ? 'Oops, missing page'
-            : `An error ${statusCode} occurred on server`
-        else return 'An error occurred on client'
-      })()}
-    </div>
-  )
+  const content = (() => {
+    if (statusCode === undefined) return 'An error occurred on the client'
+    if (statusCode === 404) return 'Oops, missing page'
+    else return `An error ${statusCode} occurred on the server`
+  })()
+
+  return <div className="flex h-full items-center justify-center">{content}</div>
 }
 
 Error.getInitialProps = ({ err, res }) => {
