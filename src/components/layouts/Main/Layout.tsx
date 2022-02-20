@@ -7,10 +7,10 @@ type Props = Parameters<typeof Meta>[0]
 
 export function MainLayout({ title, description, children }: PropsWithChildren<Props>) {
   return (
-    <div className="flex h-full flex-col">
+    <div className="grid h-full grid-rows-[auto_1fr_auto] ">
       <Meta title={title} description={description} />
       <Nav />
-      <div className="flex-grow p-4">{children}</div>
+      <div className="p-4">{children}</div>
       <Footer />
     </div>
   )
