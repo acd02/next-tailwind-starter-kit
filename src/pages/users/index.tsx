@@ -24,9 +24,12 @@ function Users({ fetchedUsers }: Props) {
 export const getStaticProps: GetStaticProps<Partial<Props>> = async () => {
   return {
     props: {
-      fetchedUsers: await (
+      fetchedUsers: (
         await get<User[], unknown>('https://jsonplaceholder.typicode.com/users')
-      ).fold(constant([]), identity),
+      ).match({
+        Ok: identity,
+        Error: constant(undefined),
+      }),
     },
   }
 }

@@ -26,9 +26,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
     'https://jsonplaceholder.typicode.com/users'
   )
 
-  const paths = fetchedUsers
-    .fold(constant([]), identity)
-    .map(u => ({ params: { id: String(u.id) } }))
+  const paths = fetchedUsers.match({
+    Ok: users => users.map(({ id }) => ({ params: { id: String(id) } })),
+    Error: constant([]),
+  })
 
   return {
     paths,
@@ -39,11 +40,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<Partial<Props>> = async ({ params }) => {
   return {
     props: {
-      fetchedUser: await (
+      fetchedUser: (
         await get<User, unknown>(
           `https://jsonplaceholder.typicode.com/users/${params?.id ?? ''}`
         )
-      ).fold(noop, identity),
+      ).match({
+        Ok: identity,
+        Error: noop,
+      }),
     },
   }
 }
