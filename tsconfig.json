@@ -4,6 +4,7 @@
     "baseUrl": ".",
     "paths": {
       "components/*": ["./src/components/*"],
+      "hooks/*": ["./src/hooks/*"],
       "pages/*": ["./src/pages/*"],
       "pagesContent/*": ["./src/pagesContent/*"],
       "utils/*": ["./src/utils/*"],
@@ -19,6 +20,7 @@
     "moduleResolution": "node",
     "noEmit": true,
     "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
