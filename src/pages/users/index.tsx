@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps<Partial<Props>> = async () => {
         await get<User[], unknown>('https://jsonplaceholder.typicode.com/users')
       ).match({
         Ok: identity,
-        Error: constant(undefined),
+        Error: constant([]),
       }),
     },
   }

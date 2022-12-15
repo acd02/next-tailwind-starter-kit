@@ -3,11 +3,11 @@ import type { NextPageWithLayout } from 'global-next'
 import type { GetStaticPaths, GetStaticProps } from 'next'
 import { RenderUser } from 'pagesContent/users/[id]'
 import type { User } from 'types/user'
-import { constant, identity, noop } from 'utils/function'
+import { constant, identity } from 'utils/function'
 import { get } from 'utils/http'
 
 type Props = {
-  fetchedUser?: User
+  fetchedUser: User | null
 }
 
 function UserDetail({ fetchedUser }: Props) {
@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps<Partial<Props>> = async ({ params })
         )
       ).match({
         Ok: identity,
-        Error: noop,
+        Error: constant(null),
       }),
     },
   }
