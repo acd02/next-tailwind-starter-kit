@@ -1,8 +1,8 @@
 import { fireEvent, getNodeText, render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import type { FC } from 'react'
+import type { PropsWithChildren } from 'react'
 
-const wrapper: FC = ({ children }) => <>{children}</>
+const wrapper = ({ children }: PropsWithChildren<unknown>) => <>{children}</>
 
 // see: https://testing-library.com/docs/react-testing-library/setup/#custom-render
 const customRender = (ui: JSX.Element, options = {}) => {
