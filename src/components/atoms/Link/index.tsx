@@ -18,17 +18,16 @@ export function Link({ label, className, param, route, isActive: isActiveProp }:
   const isActive = isActiveProp?.(pathname) ?? href === pathname
 
   return (
-    <NextLink href={href}>
-      <a
-        tabIndex={0}
-        className={cx([
-          'cursor-pointer border-b text-gray-600',
-          isActive ? 'border-gray-600' : 'border-transparent',
-          className,
-        ])}
-      >
-        {label}
-      </a>
+    <NextLink
+      href={href}
+      tabIndex={0}
+      className={cx([
+        'cursor-pointer border-b text-gray-600',
+        isActive ? 'border-gray-600' : 'border-transparent',
+        className,
+      ])}
+    >
+      {label}
     </NextLink>
   )
 }
