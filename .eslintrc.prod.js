@@ -23,7 +23,7 @@ module.exports = {
   globals: {
     fetch: 'readonly',
   },
-  ignorePatterns: ['out/', 'utils.js', '.next/', 'next.config.js', 'node_modules/'],
+  ignorePatterns: ['out/', 'utils.js', '.next/', 'next.config.js', 'vitest.config.ts', 'node_modules/'],
   parserOptions: {
     project: './tsconfig.json',
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
